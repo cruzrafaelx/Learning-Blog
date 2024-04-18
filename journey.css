@@ -13,7 +13,6 @@ body, html{
 
 h1, p{
       margin: 0;
-      color:#202020;
 }
 
 article h1{
@@ -63,7 +62,7 @@ a{
 
 /* hero-ext */
 
-.hero-ext{
+.hero{
       padding: 1em 1.5em;
       gap: 2em;
       max-width: 100%;
@@ -72,27 +71,27 @@ a{
       align-items: center;
 }
 
-.hero-ext > :last-child{
+.hero > :last-child{
      margin-top: 0.6em;
 }
 
-.hero-ext-txt{
+.hero-txt{
       flex-direction: column;
 }
 
-.hero-ext-txt p{
+.hero-txt p{
       text-shadow: none;
     
 }
 
-.hero-ext img{
+.hero img{
       width: 100%;
       max-width: 1000px;
       margin: 1.5em auto;
 
 }
 
-.hero-ext-link{
+.hero-link{
       border: none;
       color: #202020;
       font-size: 2rem;
@@ -103,12 +102,12 @@ a{
       text-shadow: none;
 }
 
-.hero-ext-sub{
+.hero-sub{
       margin-bottom: 1.5em;
 }
 
 
-.hero-ext .headline{
+.hero .headline{
       font-size: 1.2em;
       font-weight: 600;
       margin-bottom: 1em;
@@ -120,6 +119,8 @@ a{
 article{
       margin: 1em 1em 3em 1em;
       max-height: 650px;
+      max-width: 650px;
+      min-width: 300px;
       flex-direction: column;
       gap: 0.7em;
 }
@@ -143,6 +144,20 @@ footer{
 }
 
 /* Media Queries */
+
+@media(min-width: 650px){
+      .article-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+      }
+}
+
+@media(min-width: 1200px){
+      .article-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+      }
+}
 
 /* Utilities */
 .flex{
