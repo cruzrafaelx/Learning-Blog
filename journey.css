@@ -11,17 +11,9 @@ body, html{
 
 /* Typography */
 
-h1, h3, p{
+h1, p{
       margin: 0;
-}
-
-.hero h1{
-      font-size: 2rem;
-}
-
-.hero p{
-      font-size: 1rem ;
-      text-shadow: 0 0 1px #202020;
+      color:#202020;
 }
 
 article h1{
@@ -48,8 +40,9 @@ nav{
 
 .nav-title h3,
 ul{
-      font-size: 1.5rem;
+      font-size: 1rem;
 }
+
 
 .logo{
       width: 40px;
@@ -68,37 +61,15 @@ a{
       color: inherit;
 }
 
-
-/* Hero */
-.hero{
-      
-      height: 400px;
-      padding: 6em 1em 1em 1em;
-      flex-direction: column;
-      color: white;
-      overflow: hidden;
-      
-}
-
-.bg-img{
-      background-image: url("images/hero.jpg");
-      background-size: cover;
-      background-position: center;
-}
-
-
-
-
 /* hero-ext */
 
 .hero-ext{
       padding: 1em 1.5em;
       gap: 2em;
-      align-items: center;
-      max-width: 100vw;
-      max-height: auto;
+      max-width: 100%;
       flex-direction: column;
-      
+      justify-content: center;
+      align-items: center;
 }
 
 .hero-ext > :last-child{
@@ -115,8 +86,9 @@ a{
 }
 
 .hero-ext img{
-      max-width: 100%;
-      margin: 1.5em 0;
+      width: 100%;
+      max-width: 1000px;
+      margin: 1.5em auto;
 
 }
 
@@ -131,11 +103,10 @@ a{
       text-shadow: none;
 }
 
-
-.hero-ext p,
-.hero-ext h1{
- color:#202020;
+.hero-ext-sub{
+      margin-bottom: 1.5em;
 }
+
 
 .hero-ext .headline{
       font-size: 1.2em;
@@ -159,7 +130,6 @@ article img{
       object-fit: cover;
       border-radius: 0.2em;
 }
-
 
 /* Footer */
 
