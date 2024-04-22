@@ -17,9 +17,11 @@ function firstRender(){
                   feedHtml +=  `
                        <article class="article flex">
                         <img src="${blog.image}">
-                        <p>${blog.date}</p>
-                        <h1>${blog.name}</h1>
-                        <p>${blog.description}</p>
+                        <div class="art-text-container">
+                              <p>${blog.date}</p>
+                              <h1>${blog.name}</h1>
+                              <p>${blog.description}</p>
+                        </div>
                        </article>
                        `
             }
@@ -35,9 +37,11 @@ function firstRender(){
                   feedHtml +=  `
                        <article class="article flex">
                         <img src="${blog.image}">
-                        <p>${blog.date}</p>
-                        <h1>${blog.name}</h1>
-                        <p>${blog.description}</p>
+                        <div class="art-text-container">
+                              <p>${blog.date}</p>
+                              <h1>${blog.name}</h1>
+                              <p>${blog.description}</p>
+                        </div>
                        </article>
                        `
             }

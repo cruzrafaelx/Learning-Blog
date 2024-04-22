@@ -4,8 +4,10 @@ html {
       font-family: 'Source Sans 3', 'Arial';
       height: 100vh;
       max-width: 100vw;
-        
+      position: relative;
+      
 }
+
 
 *{
       box-sizing: border-box;  
@@ -38,13 +40,19 @@ article h1 {
 
 /* Navigation */
 
+
 .nav-container {
-      
+      position: fixed;
+      z-index: 999;
+      right: 50%;
+      left: 50%;
+      transform: translate(-50%, -85%);
+      width: 100%; 
+      height: 100px;
       justify-content: space-between;
       align-items: center;
       color: #202020;
-      gap: 1em;
-      margin: 0 auto 1em;
+      background-color: white;
 }
 
 .nav-title {
@@ -219,6 +227,9 @@ a {
 
 
 /* Main */
+main{
+      margin-top: 5em;
+}
 
 .article-container {
       display: grid;
@@ -226,11 +237,28 @@ a {
       column-gap: 30px;    
       row-gap: 50px;
       margin: 0 auto 1.8em;
+      
 }
 
 article {
       flex-direction: column;
+      border-radius: 0.5em;
+      padding-bottom: 1em;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+      top:-50px; 
+      left:-35px; 
+      z-index:998; 
+      cursor: pointer; 
+      transition-property: all; 
+      transition-duration: 0.3s; 
+      transition-timing-function: ease;
 }
+
+article:hover{
+      transform: scale(1.05); 
+}
+
 
 article img {
       height: 300px;
@@ -238,6 +266,14 @@ article img {
       object-fit: cover;
       border-radius: 0.2em;
       margin-bottom: 1em;
+}
+
+
+
+
+
+.art-text-container{
+      padding: 0 1.2em;
 }
 
 .view-btn{
@@ -295,7 +331,7 @@ main,
 
 }
 
-main,
+
 .about-hero,
 .jour-hero,
 .view-btn{
