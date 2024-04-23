@@ -1,16 +1,17 @@
 body,
 html {
-      margin: 0;
       font-family: 'Source Sans 3', 'Arial';
       height: 100vh;
       max-width: 100vw;
       position: relative;
-      
 }
 
-
-*{
+*,
+*:before,
+*:after{
       box-sizing: border-box;  
+      margin: 0;
+      padding: 0;
 }
 
 /* Typography */
@@ -29,6 +30,10 @@ p {
 .hero p {
       font-size: 1rem;
       text-shadow: 0 0 1px #202020;
+}
+
+.hero .scrimba{
+      text-decoration: underline;
 }
 
 article h1 {
@@ -77,12 +82,39 @@ ul {
       font-weight: 600;
 }
 
-a {
+
+ a {
       text-decoration: none;
       color: inherit;
+      
+}
+
+nav a, button{
+      position: relative;
+      padding: 0 3px;
 }
 
 
+nav a:after, button:after{
+      content: "";
+      position: absolute;
+      background-color: #444444;
+      height: 2px;
+      width: 0;
+      left: 0;
+      bottom: -10px ;
+      transition: 0.3s;
+}
+
+nav a:hover, button:hover{
+      color:#444444
+}
+
+nav a:hover:after, button:hover:after{
+      width: 100%;
+}
+
+ 
 /* Hero */
 .hero {
 
@@ -99,7 +131,7 @@ a {
 .bg-img {
       background-image: url("images/hero.jpg");
       background-size: cover;
-      background-position: center;
+      background-position: bottom;
 }
 
 .hero-link {
