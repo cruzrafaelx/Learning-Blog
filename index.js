@@ -2,6 +2,31 @@ import { blogs } from "./data.js"
 
 let isClicked = false
 
+const mainMenu = document.querySelector(".main-menu")
+const openMenu = document.querySelector(".open-menu")
+const closeMenu = document.querySelector(".close-menu")
+
+openMenu.addEventListener("click", e => {
+      e.preventDefault()
+      show()
+})
+
+
+closeMenu.addEventListener("click", e => {
+      e.preventDefault()
+      close()
+})
+
+
+function show(){
+      mainMenu.style.display = "flex";
+      mainMenu.style.top = "0";
+}
+
+function close(){
+      mainMenu.style.top = "-1000%";
+}
+
 document.querySelector(".view-btn").addEventListener("click", function(e){
       isClicked = !isClicked
       render()

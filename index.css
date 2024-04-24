@@ -22,13 +22,21 @@ p {
       margin: 0;
 }
 
+p{
+      font-size: 1.1rem;
+}
 
-.hero h1 {
+h1{
       font-size: 2rem;
 }
 
+.hero{
+      flex-direction: column;
+      gap: 1px;
+}
+
 .hero p {
-      font-size: 1rem;
+      
       text-shadow: 0 0 1px #202020;
 }
 
@@ -36,9 +44,7 @@ p {
       text-decoration: underline;
 }
 
-article h1 {
-      font-size: 1.8rem;
-}
+
 
 
 /* Layout */
@@ -75,13 +81,26 @@ ul {
       height: 40px;
 }
 
-ul {
+nav .main-menu {
       list-style-type: none;
       padding: 0;
       gap: 1em;
       font-weight: 600;
 }
 
+nav .open-menu{
+      font-size: 1.2rem;
+      cursor: pointer;
+}
+
+nav .close-menu, .icons i{
+      font-size: 1.2rem;
+      cursor: pointer;
+} 
+
+.main-menu, .open-menu, .close-menu, .icons i{
+      display: none;
+}
 
  a {
       text-decoration: none;
@@ -179,6 +198,7 @@ nav a:hover:after, button:hover:after{
 
 .about-hero-txt p{
       text-shadow: none;
+
     
 }
 
@@ -301,9 +321,6 @@ article img {
 }
 
 
-
-
-
 .art-text-container{
       padding: 0 1.2em;
 }
@@ -331,6 +348,7 @@ footer {
       padding: 3em;
       margin-top: 3.1rem;
       min-width: 450px;
+      border-radius: 5px 5px 0 0 ;
 }
 
 /* Media Queries */
@@ -343,6 +361,58 @@ footer {
             row-gap: 50px;
       }
 }
+
+
+@media(max-width: 1200px){
+      nav .main-menu{
+            transition: ease top 3s ;
+            height: 20vh;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 10;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* background-color: rgba(32, 32, 32); */
+            background: linear-gradient(135deg, rgba(33, 33, 33, 0.1), #3a3535);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border-radius: 0 0 10px 10px;
+            color: whitesmoke;
+            display: none;         
+      
+      }
+
+      nav .main-menu .close-menu{
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+      }
+
+
+      nav .open-menu{
+            display: block;
+      }
+
+      .icons i {
+            display: inline-block;
+            margin: 0.2em 0.5em 0;
+      }
+
+      nav a:after, button:after{
+      
+            background-color: rgb(255, 255, 255);
+           
+      }
+      
+      nav a:hover, button:hover{
+            color:rgb(214, 214, 214);
+      }
+}
+
 
 
 /* Utilities */

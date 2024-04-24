@@ -61,3 +61,10 @@ a:hover{
 a:hover:after{
       width: 100%;
 }
+
+4. How to make a blurry glass card:
+
+background: linear-gradient(135deg, rgba(33, 33, 33, 0.1), #3a3535);
+backdrop-filter: blur(15px);
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+border-radius: 0 0 10px 10px;
