@@ -375,9 +375,9 @@ footer {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* background-color: rgba(32, 32, 32); */
-            background: linear-gradient(135deg, rgba(33, 33, 33, 0.1), #3a3535);
-            backdrop-filter: blur(20px);
+            background-color: rgba(32, 32, 32);
+            /* background: linear-gradient(135deg, rgba(33, 33, 33, 0.1), #3a3535);
+            backdrop-filter: blur(20px); */
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             border-radius: 0 0 10px 10px;
             color: whitesmoke;
